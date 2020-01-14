@@ -112,4 +112,9 @@ describe("Coolculator", function() {
       expect(randy).to.be.an('number')
     }
   })
+
+  it("should return square of one number", () => {
+    result = mm.square(20);
+    expect(result).to.equal(400);
+  })
 });
