@@ -84,4 +84,32 @@ describe("Coolculator", function() {
     result = mm.isCool(2);
     expect(result).to.equal(false);
   })
+
+  it("should sum an array of numbers", () => {
+    result = mm.sum([1, 2, 3, 4]);
+    expect(result).to.equal(10);
+  })
+
+  it("should multiply an array of numbers", () => {
+    result = mm.multiplyArray([1, 2, 3, 2]);
+    expect(result).to.equal(12);
+  })
+
+  it("should return the average of an array of numbers", () => {
+    result = mm.mean([1, 2, 3, 2]);
+    expect(result).to.equal(2);
+  })
+
+  it("should return the factorial of a number", () => {
+    result = mm.factorial(5);
+    expect(result).to.equal(120);
+  })
+
+  it("should return random integer between 0 and a given integer", () => {
+    for (var i = 0; i < 10; i++) {
+      var randy = mm.random(5);
+      expect(randy).to.be.within(0, 4);
+      expect(randy).to.be.an('number')
+    }
+  })
 });
